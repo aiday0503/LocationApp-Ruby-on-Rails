@@ -1,0 +1,10 @@
+<h1> <%= @location.name %> </h1>
+<h3> <%= @location.street %> </h3>
+<h3> <%= @location.zipcode %> </h3>
+<a href="/locations/<%= @location.id %>/edit"> Edit Branch </a>
+<form action="/locations/<%= @location.id %>" method="post">
+<input type="hidden" name="_method" value="delete">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<input type="submit" value="Delete">
+
+</form>
